@@ -1,33 +1,38 @@
 # Requirements and Conceptual Model
-Julissa, El, Tracy
+Julissa, El, Tracy, Kiki, Eyerusalem
 The end user is Lana. The end user will need to be able to track her clients, dogs, walks, and payments. 
 Clients
--ClientID
+-ClientID (PK)
 -First Name
 -Last Name
 -Phone Number
 -Address
 
 Dogs
--DogID
--Dog Name
--Dog Breed
--ClientID
+-Name
+-Breed
+-Notes
+-ClientID (FK)
 
 Walks
--WalkID
--DogID
+-WalkID (PK)
 -Date
 -Time
 -Duration
 -Status
 
 Payment
--PaymentID
--ClientID
+-PaymentID(PK)
+-ClientID(FK)
+-WalkID (FK)
 -Amount
 -Payment Method
 -Date
+
+WalkDogs
+-WalkDogID(PK)
+-WalkID(FK)
+-DogID (FK)
 
 #Logical Model
 Tables will be: Clients, Dogs, Walks, Payments
@@ -35,3 +40,4 @@ Tables will be: Clients, Dogs, Walks, Payments
 -Dog and Walk may have a one to many relationship because one dog can have many walks
 -Client to Payments may have more than one dog because one client may have many payments
 -A many to many relationship could be between walks and dogs since Lana may walk multiple dogs
+We came to the conclusion that we would need to add a junction table, so that way we would have a many to many relationship
