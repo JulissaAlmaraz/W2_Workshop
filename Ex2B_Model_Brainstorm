@@ -1,2 +1,30 @@
 # Requirements and Conceptual Model
 Julissa, El
+The end user is Lana. The end user will need to be able to track her clients, dogs, walks, and payments. 
+Clients
+-ClientID
+-First Name
+-Last Name
+-Phone Number
+-Address
+
+Dogs
+-DogID
+-Dog Name
+-Dog Breed
+-ClientID
+
+Walks
+-WalkID
+-DogID
+-Date
+-Time
+-Duration
+-Status
+
+Payment
+-PaymentID
+-ClientID
+-Amount
+-Payment Method
+-Date
