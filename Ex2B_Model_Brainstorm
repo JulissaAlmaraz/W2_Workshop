@@ -1,5 +1,5 @@
 # Requirements and Conceptual Model
-Julissa, El
+Julissa, El, Tracy
 The end user is Lana. The end user will need to be able to track her clients, dogs, walks, and payments. 
 Clients
 -ClientID
@@ -28,3 +28,10 @@ Payment
 -Amount
 -Payment Method
 -Date
+
+#Logical Model
+Tables will be: Clients, Dogs, Walks, Payments
+-Client to Dogs may have a one to many relationship because one client may have more than one dog
+-Dog and Walk may have a one to many relationship because one dog can have many walks
+-Client to Payments may have more than one dog because one client may have many payments
+-A many to many relationship could be between walks and dogs since Lana may walk multiple dogs
