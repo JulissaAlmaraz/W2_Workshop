@@ -27,7 +27,7 @@ CREATE TABLE Walks (
     Status VARCHAR(50)
 );
 
-CREATE TABLE Payment (
+CREATE TABLE Payments (
     PaymentID INT AUTO_INCREMENT PRIMARY KEY,
     ClientID INT,
     WalkID INT,
